@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeeksforGeeks Clone</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topline">
+      <button class="icon-btn menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#" aria-label="GeeksforGeeks home">
+        <span>GeeksforGeeks</span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Search">S</button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" title="Toggle theme">D</button>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#">DSA</a>
+      <a href="#">Practice Problems</a>
+      <a href="#">C</a>
+      <a href="#">C++</a>
+      <a href="#">Java</a>
+      <a href="#">Python</a>
+      <a href="#">JavaScript</a>
+      <a href="#">Data Science</a>
+      <a href="#">Machine Learning</a>
+      <a href="#">Courses</a>
+    </nav>
+  </header>
+
+  <aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <div class="side-menu-head">
+      <div>
+        <strong>GeeksforGeeks</strong>
+        <span>Learn, practice, and grow</span>
+      </div>
+      <button class="icon-btn close-menu" aria-label="Close menu">X</button>
+    </div>
+    <div class="side-profile">
+      <div class="profile-avatar">G</div>
+      <div>
+        <strong>Hello, Geek</strong>
+        <span>Choose your next learning path</span>
+      </div>
+    </div>
+    <div class="side-search">
+      <input type="search" placeholder="Search tutorials..." />
+    </div>
+    <nav class="side-links" aria-label="Hamburger menu">
+      <a href="#courses">Courses <span>Live batches</span></a>
+      <a href="#gate">GATE 2027 <span>Free counselling</span></a>
+      <a href="#explore">Practice <span>DSA, Web, AI</span></a>
+      <a href="#insights">Interview Prep <span>1:1 expert help</span></a>
+      <a href="#footer">Company <span>About, careers, contact</span></a>
+    </nav>
+    <div class="side-actions">
+      <button>Sign In</button>
+      <button>Start Learning</button>
+    </div>
+  </aside>
+  <div class="menu-backdrop" hidden></div>
+
+  <main>
+    <section class="hero">
+      <h1>Hello, What Do You Want To Learn?</h1>
+      <form class="search-wrap" id="searchForm">
+        <input id="courseSearch" type="search" placeholder="Learn Python, DSA, Web Development..." autocomplete="off" />
+      </form>
+      <div class="quick-tags">
+        <button data-query="summer skillup">Summer Skillup 2026</button>
+        <button data-query="data science">DS, ML & AI</button>
+        <button data-query="system design">LLD & HLD</button>
+      </div>
+    </section>
+
+    <section class="section courses-section" id="courses">
+      <div class="section-head">
+        <h2>Courses</h2>
+        <button class="outline-btn" id="viewAllCourses">View All</button>
+      </div>
+      <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <section class="gate-banner" id="gate" aria-label="GATE resources">
+      <div class="gate-copy">
+        <p>Most Trusted and<br>Affordable <span>GATE 2027</span><br>Resources</p>
+        <button>Get Free Counselling</button>
+      </div>
+      <div class="gate-stats">
+        <article><strong>900+</strong><span>Hrs<br>Course Duration</span></article>
+        <article><strong>3000+</strong><span>Questions in DPP</span></article>
+        <article><strong>2000+</strong><span>PYQs Questions</span></article>
+        <article><strong>1000+</strong><span>Hrs<br>Recorded Content</span></article>
+        <article><strong>1</strong><span>Year<br>Course Validity</span></article>
+        <article><strong>100+</strong><span>Test Series</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <h2>Must Explore</h2>
+      <div class="explore-shortcuts" id="shortcutRow"></div>
+    </section>
+
+    <section class="section">
+      <h2>Explore</h2>
+      <div class="topic-strip" id="topicStrip"></div>
+    </section>
+
+    <section class="insights-card" id="insights">
+      <div class="insights-copy">
+        <h2>Need help with<br><span id="insightWord">Interview Preparation?</span></h2>
+        <p>Connect with trusted experts, anytime. Get real answers, real guidance, in real time.</p>
+        <div class="mentor-stats" aria-label="Mentor highlights">
+          <span><strong>500+</strong> mentors</span>
+          <span><strong>24/7</strong> guidance</span>
+          <span><strong>4.8</strong> rating</span>
+        </div>
+        <button>Explore Now</button>
+      </div>
+      <div class="people-cloud" aria-hidden="true">
+        <div class="bubble bubble-a">"Hi Everyone, hope you all are doing great. Here is a thought for the day!"</div>
+        <div class="avatar avatar-one" data-person="0"></div>
+        <div class="avatar avatar-two" data-person="1"></div>
+        <div class="avatar avatar-three" data-person="2"></div>
+        <div class="bubble bubble-b">"Web3 is trending because it's changing the internet as we..."</div>
+        <div class="bubble bubble-c">"On-campus Interview Experience for SDE"</div>
+        <div class="mentor-card">
+          <strong>Live expert help</strong>
+          <span>Resume reviews, project feedback, interview prep, and career roadmaps.</span>
+        </div>
+      </div>
+      <div class="feature-row">
+        <span>1:1 Expert Sessions</span>
+        <span>Personalized Feed</span>
+        <span>Flexible & Affordable</span>
+        <span>Build Your Network</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-brand">
+      <div class="footer-logo"><span class="gfg-mark" aria-hidden="true"><i></i><i></i></span><strong>GeeksforGeeks</strong></div>
+      <address>
+        <strong>Corporate & Communications Address:</strong><br>
+        A-143, 6th Floor, Sovereign Corporate Tower, Sector-136, Noida, Uttar Pradesh (201305)
+      </address>
+      <address>
+        <strong>Registered Address:</strong><br>
+        K 061, Tower K, Gulshan Vivante Apartment, Sector 137, Noida, Gautam Buddh Nagar, Uttar Pradesh, 201305
+      </address>
+      <div class="socials"><span>in</span><span>ig</span><span>X</span><span>f</span><span>yt</span></div>
+      <div class="store-row"><span>Get it on Google Play</span><span>Download on App Store</span></div>
+    </div>
+    <div class="footer-links" id="footerLinks"></div>
+    <p class="copyright">@GeeksforGeeks, Sanchhaya Education Private Limited, All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
